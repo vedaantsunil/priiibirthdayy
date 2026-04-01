@@ -41,7 +41,7 @@ const AddSong: React.FC<AddSongProps> = ({ onAddSong }) => {
 
     // Validation: Require either favorite lyric or note
     if (!favoriteLyric.trim() && !note.trim()) {
-      setError('Please add either a favorite lyric or a personal note for this song.');
+      setError('Please add either a favorite lyric or a personal note for this song dumbass.');
       return;
     }
 
@@ -77,33 +77,35 @@ const AddSong: React.FC<AddSongProps> = ({ onAddSong }) => {
   };
 
   return (
-    <div className="max-w-xl mx-auto px-4 py-6">
+    <div className="min-h-screen pt-8">
+      <div className="max-w-xl mx-auto px-4 py-8">
 
       {/* Header */}
-      <div className="mb-4">
+      <div className="mb-8">
         <h2 className="text-lg font-semibold text-white">
+          
           Add song
         </h2>
         <p className="text-xs text-[#b3b3b3]">
           Add to your collection
         </p>
-      </div>
+      </div><br />
 
       {/* Search */}
-      <div className="mb-3">
-        <div className="relative">
+      <div className="mb-8">
+        <div className="flex gap-3">
           <input
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
             placeholder="Search songs"
-            className="search-input pr-20 text-sm"
+            className="search-input text-sm flex-1"
           />
 
           <button
             onClick={handleSearch}
             disabled={searching}
-            className="absolute right-1 top-1/2 -translate-y-1/2 bg-[#1db954] text-black px-3 py-1 rounded-full text-xs font-medium"
+            className="bg-[#1db954] text-black px-4 py-2 rounded-full text-xs font-medium hover:bg-[#1ed760] transition-colors whitespace-nowrap flex-shrink-0"
           >
             {searching ? '...' : 'Search'}
           </button>
@@ -240,6 +242,7 @@ const AddSong: React.FC<AddSongProps> = ({ onAddSong }) => {
           {error}
         </p>
       )}
+      </div>
     </div>
   );
 };

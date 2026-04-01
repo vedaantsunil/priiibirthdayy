@@ -34,7 +34,7 @@ const Timeline: React.FC<TimelineProps> = ({ songs, loading, onRefresh }) => {
             No songs yet
           </h3>
           <p className="text-[#b3b3b3] mb-6 text-sm">
-            Start building your collection by adding your first song
+            Start building your collection by adding your first song loser
           </p>
           <button
             onClick={onRefresh}
@@ -65,7 +65,7 @@ const Timeline: React.FC<TimelineProps> = ({ songs, loading, onRefresh }) => {
 
       {/* Mobile Headers - Hidden on Desktop */}
       <div className="sm:hidden px-4 py-2 border-b border-[#282828]">
-        <div className="text-xs text-[#b3b3b3] uppercase tracking-wider">Your Collection</div>
+        <div className="text-xs text-[#b3b3b3] uppercase tracking-wider">Muziccc</div>
       </div>
 
       {/* Songs */}

@@ -97,7 +97,7 @@ const Home: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            Happy Birthday Priii! 🎉
+            Happy Birthday LOSER! 🎉
           </motion.h1>
           
           <motion.p 
@@ -106,11 +106,11 @@ const Home: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.6 }}
           >
-            To the most amazing person who makes every day brighter,
+            Someone told me no materialistic gifts ˙◠˙
             <br />
-            Here's a collection of memories and songs that remind me of you.
+            So here's this stupid thing that I made for you
             <br />
-            <span className="text-white mt-4 block">🌙 Scroll down to see our journey ✨</span>
+            <span className="text-white mt-4 block">🌙 Let this be your musical time capsule ✨</span>
           </motion.p>
 
           <motion.div
@@ -118,7 +118,7 @@ const Home: React.FC = () => {
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <span className="text-3xl">👇</span>
+           <br /> <span className="text-3xl">👇</span><br />
           </motion.div>
         </motion.div>
       </motion.section>
@@ -132,8 +132,8 @@ const Home: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Our Memories</h2>
-          <p className="section-subtitle">23 moments that make me smile</p>
+          <h2 className="section-title">Da Stupid Diva</h2>
+          <p className="section-subtitle">23 cute photos that do make me smile</p>
         </motion.div>
 
         <div className="photo-grid">
@@ -177,10 +177,10 @@ const Home: React.FC = () => {
           transition={{ duration: 0.6 }}
         >
           <p className="text-lg text-[#b3b3b3] mb-4">
-            Every song in your collection has a story,
+            Wanted to make an app but you dont have storage lmao,
           </p>
           <p className="text-xl text-white font-medium mb-6">
-            and every photo has a memory attached to it. 💜
+            HAPPY BIRTHDAYYYYY AGAIN. 💜
           </p>
           <motion.button
             whileHover={{ scale: 1.04 }}
