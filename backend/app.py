@@ -13,6 +13,11 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)
 
+# Health check endpoint for Railway
+@app.route('/health', methods=['GET'])
+def health_check():
+    return jsonify({"status": "healthy", "timestamp": datetime.now().isoformat()}), 200
+
 # Initialize Supabase client
 supabase: Client = create_client(
     os.getenv('SUPABASE_URL'),

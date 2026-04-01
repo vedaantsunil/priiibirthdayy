@@ -1,0 +1,16 @@
+[build]
+builder = "NIXPACKS"
+
+[[services]]
+name = "frontend"
+source = "frontend"
+build_command = "npm install && npm run build"
+start_command = "npm run preview"
+healthcheck_path = "/"
+
+[[services]]
+name = "backend"
+source = "backend"
+build_command = "pip install -r requirements.txt"
+start_command = "python app.py"
+healthcheck_path = "/health"
