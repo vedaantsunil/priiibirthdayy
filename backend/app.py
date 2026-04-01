@@ -55,15 +55,20 @@ def get_spotify_access_token():
 def get_songs():
     """Get all songs from the database"""
     try:
+        print("Attempting to fetch songs from Supabase...")
         response = supabase.table('song_entries').select('*').order('created_at', desc=True).execute()
         
         if response.data:
+            print(f"Successfully fetched {len(response.data)} songs")
             return jsonify(response.data)
         else:
+            print("No songs found in database")
             return jsonify([])
     except Exception as e:
-        print(f"Error fetching songs: {e}")
-        return jsonify({'error': 'Failed to fetch songs'}), 500
+        print(f"Error fetching songs: {str(e)}")
+        print(f"Supabase URL: {os.getenv('SUPABASE_URL')}")
+        print(f"Supabase Key exists: {'Yes' if os.getenv('SUPABASE_KEY') else 'No'}")
+        return jsonify({'error': 'Failed to fetch songs', 'details': str(e)}), 500
 
 @app.route('/songs', methods=['POST'])
 def add_song():
