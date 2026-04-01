@@ -51,11 +51,6 @@ def get_spotify_access_token():
         print(f"Error getting Spotify token: {e}")
         return None
 
-@app.route('/health', methods=['GET'])
-def health_check():
-    """Health check endpoint"""
-    return jsonify({'status': 'healthy', 'timestamp': datetime.now().isoformat()})
-
 @app.route('/songs', methods=['GET'])
 def get_songs():
     """Get all songs from the database"""
