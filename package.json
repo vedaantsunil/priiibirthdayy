@@ -1,0 +1,29 @@
+{
+  "name": "lyricsfrompriii",
+  "version": "1.0.0",
+  "description": "A romantic, interactive music diary for two people",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && python app.py",
+    "install:all": "npm run install:frontend && npm run install:backend",
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && pip install -r requirements.txt",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && python app.py"
+  },
+  "keywords": [
+    "music",
+    "diary",
+    "romantic",
+    "spotify",
+    "react",
+    "flask"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
